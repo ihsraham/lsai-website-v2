@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
+@theme {
+  --color-lsai-red: #CC0100;
+  --color-lsai-black: #000000;
+
+  --color-lsai-gray-50: #F8F9FA;
+  --color-lsai-gray-100: #F5F5F5;
+  --color-lsai-gray-200: #E5E5E5;
+  --color-lsai-gray-600: #666666;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-dm: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFFFF;
+  --foreground: #000000;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Remove default dark mode for now as per PRD "Light backgrounds" focus */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #FFFFFF;
+    /* Force light mode initially to match PRD guidelines strictly */
+    --foreground: #000000;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
