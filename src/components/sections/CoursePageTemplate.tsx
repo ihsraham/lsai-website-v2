@@ -9,10 +9,11 @@ interface CoursePageProps {
   description: string;
   placeholderId?: number;
   imageSrc?: string;
+  enrollUrl?: string;
 }
 
 // Temporary component for individual course pages
-export function CoursePageTemplate({ title, description, placeholderId, imageSrc }: CoursePageProps) {
+export function CoursePageTemplate({ title, description, placeholderId, imageSrc, enrollUrl }: CoursePageProps) {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -22,7 +23,15 @@ export function CoursePageTemplate({ title, description, placeholderId, imageSrc
                 <div>
                    <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
                    <p className="text-xl text-gray-300 mb-8">{description}</p>
-                   <Button size="lg">Enroll Now</Button>
+                   <div className="flex gap-4 mb-8">
+                     {enrollUrl ? (
+                       <a href={enrollUrl} target="_blank" rel="noopener noreferrer">
+                         <Button size="lg">Enroll Now</Button>
+                       </a>
+                     ) : (
+                       <Button size="lg">Enroll Now</Button>
+                     )}
+                   </div>
                 </div>
                 <div>
                    {imageSrc ? (

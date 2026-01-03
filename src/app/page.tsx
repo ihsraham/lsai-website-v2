@@ -2,8 +2,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
-import { ImagePlaceholder } from '@/components/ui/ImagePlaceholder';
-import { CheckCircle, Globe, Award, TrendingUp, Users, BookOpen } from 'lucide-react';
+import { CheckCircle, Globe, Award, TrendingUp, Users } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
@@ -24,8 +23,12 @@ export default function Home() {
                   Industry-recognized credentials. Real-world skills. Career transformation. The future belongs to those who understand AI.
                 </p>
                 <div className="flex flex-wrap gap-4 pt-2">
-                  <Button size="lg">Explore Programs</Button>
-                  <Button size="lg" variant="secondary">Verify Certificate</Button>
+                  <Link href="/programs">
+                      <Button size="lg">Explore Programs</Button>
+                  </Link>
+                  <Link href="/verify">
+                    <Button size="lg" variant="secondary">Verify Certificate</Button>
+                  </Link>
                 </div>
                 
                 <div className="pt-8 flex items-center space-x-6 text-sm text-gray-500 font-medium">
@@ -49,12 +52,6 @@ export default function Home() {
         <section className="bg-white py-8 border-b border-gray-100">
            <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12">
               <span className="text-gray-600 font-medium">Join 2,500+ professionals advancing their AI careers</span>
-              <div className="flex space-x-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                 {/* Trust Badges - Could be placeholders or text for now */}
-                 <span className="font-bold text-gray-400">Google Project IDX</span>
-                 <span className="font-bold text-gray-400">Microsoft</span>
-                 <span className="font-bold text-gray-400">IBM</span>
-              </div>
            </div>
         </section>
 
@@ -103,7 +100,9 @@ export default function Home() {
                      <li key={item} className="flex items-center"><CheckCircle className="w-5 h-5 mr-3 text-lsai-red" /> {item}</li>
                    ))}
                  </ul>
-                 <Button className="mt-4" size="lg">View Diploma Details</Button>
+                 <Link href="/programs/applied-ai-professional">
+                    <Button className="mt-4" size="lg">View Diploma Details</Button>
+                 </Link>
                </div>
              </div>
            </div>
@@ -134,7 +133,7 @@ export default function Home() {
                  <div className="p-6 flex-1 flex flex-col">
                    <h3 className="text-xl font-bold mb-2">AI Content Architect</h3>
                    <p className="text-gray-600 text-sm mb-4 flex-1">Master content creation, strategy, and brand voice with AI tools.</p>
-                   <Link href="/programs" className="text-lsai-red font-medium hover:underline text-sm flex items-center">Learn More <TrendingUp className="w-3 h-3 ml-1" /></Link>
+                   <Link href="/programs/ai-content-architect" className="text-lsai-red font-medium hover:underline text-sm flex items-center">Learn More <TrendingUp className="w-3 h-3 ml-1" /></Link>
                  </div>
                </Card>
 
@@ -144,7 +143,7 @@ export default function Home() {
                  <div className="p-6 flex-1 flex flex-col">
                    <h3 className="text-xl font-bold mb-2">AI Career Catalyst</h3>
                    <p className="text-gray-600 text-sm mb-4 flex-1">Personal branding and job search optimization using AI.</p>
-                   <Link href="/programs" className="text-lsai-red font-medium hover:underline text-sm flex items-center">Learn More <TrendingUp className="w-3 h-3 ml-1" /></Link>
+                   <Link href="/programs/ai-career-catalyst" className="text-lsai-red font-medium hover:underline text-sm flex items-center">Learn More <TrendingUp className="w-3 h-3 ml-1" /></Link>
                  </div>
                </Card>
 
@@ -154,7 +153,7 @@ export default function Home() {
                  <div className="p-6 flex-1 flex flex-col">
                    <h3 className="text-xl font-bold mb-2">AI Automation Engineer</h3>
                    <p className="text-gray-600 text-sm mb-4 flex-1">Workflow automation and process optimization with no-code tools.</p>
-                   <Link href="/programs" className="text-lsai-red font-medium hover:underline text-sm flex items-center">Learn More <TrendingUp className="w-3 h-3 ml-1" /></Link>
+                   <Link href="/programs/ai-automation-engineer" className="text-lsai-red font-medium hover:underline text-sm flex items-center">Learn More <TrendingUp className="w-3 h-3 ml-1" /></Link>
                  </div>
                </Card>
 
@@ -164,7 +163,7 @@ export default function Home() {
                  <div className="p-6 flex-1 flex flex-col">
                    <h3 className="text-xl font-bold mb-2">AI App Builder</h3>
                    <p className="text-gray-600 text-sm mb-4 flex-1">Build functional AI applications and MVPs without deep coding knowledge.</p>
-                   <Link href="/programs" className="text-lsai-red font-medium hover:underline text-sm flex items-center">Learn More <TrendingUp className="w-3 h-3 ml-1" /></Link>
+                   <Link href="/programs/ai-app-builder" className="text-lsai-red font-medium hover:underline text-sm flex items-center">Learn More <TrendingUp className="w-3 h-3 ml-1" /></Link>
                  </div>
                </Card>
             </div>
@@ -179,8 +178,12 @@ export default function Home() {
                Join thousands of professionals mastering the skills of the future. Start your journey today.
              </p>
              <div className="flex justify-center gap-4">
-               <Button size="lg">View All Programs</Button>
-               <Button size="lg" variant="secondary">Contact Support</Button>
+               <a href="https://community.lsai.ai/s/store" target="_blank" rel="noopener noreferrer">
+                 <Button size="lg">View All Programs</Button>
+               </a>
+               <a href="mailto:AshishAshah@outlook.com">
+                 <Button size="lg" variant="secondary">Contact Support</Button>
+               </a>
              </div>
           </div>
         </section>
