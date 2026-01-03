@@ -1,0 +1,14 @@
+# Google Sheets
+# JSON string of service account credentials
+GOOGLE_SHEETS_CREDENTIALS=
+# The ID of the Google Sheet acting as the database
+GOOGLE_SHEET_ID=1nAx6kTIbq971grh3Av14g8okI0gex11n7SX7Gl1lPeU
+
+# Certifier - Course Certificates (Account #1)
+CERTIFIER_COURSE_API_KEY=
+
+# Certifier - Diploma (Account #2)
+CERTIFIER_DIPLOMA_API_KEY=
+
+# API Version
+CERTIFIER_API_VERSION=2022-10-26
