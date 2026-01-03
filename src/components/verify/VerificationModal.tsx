@@ -55,7 +55,7 @@ export function VerificationModal({ credential, isOpen, onClose }: VerificationM
                </button>
                <Shield className="w-12 h-12 mx-auto mb-2" />
                <h2 className="text-xl font-bold">Credential Verification</h2>
-               <p className="text-white/80 text-sm">Official LSAI Blockchain Verification</p>
+               <p className="text-white/80 text-sm">Official LSAI Credential Verification</p>
              </div>
              
              <div className="p-6 space-y-6">

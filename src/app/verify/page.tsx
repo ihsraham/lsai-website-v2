@@ -131,7 +131,7 @@ export default function Verify() {
                                  <h2 className="text-xl font-bold mt-2">Applied AI Professional Diploma</h2>
                                  <p className="text-gray-500 text-sm">Mastery of AI Strategy, implementation, and content creation.</p>
                               </div>
-                              <img src="/logo.png" alt="LSAI" className="h-10 opacity-20" /> 
+                              <img src="/images/lsai-logo-square.png" alt="LSAI" className="h-10 opacity-20" /> 
                            </div>
                            
                            {/* Use Credential Card for logic, but maybe wrapper div tailored above */}
